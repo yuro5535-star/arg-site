@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>ACESSO</title>
+
+  <style>
+    body {
+      background: black;
+      color: #e0e0e0;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .caixa {
+      text-align: center;
+    }
+
+    input {
+      background: black;
+      border: 1px solid #444;
+      color: white;
+      padding: 8px;
+      margin-top: 10px;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: 1px solid #444;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    p {
+      margin-top: 15px;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="caixa">
+    <div>DIGITE A SENHA</div>
+
+    <input id="senha" type="password">
+    <br><br>
+    <button onclick="verificar()">ENTRAR</button>
+
+    <p id="resposta"></p>
+  </div>
+
+  <!-- AQUI FICA O SCRIPT -->
+  <script>
+    function verificar() {
+      const s = document.getElementById("senha").value.toLowerCase()
+      const r = document.getElementById("resposta")
+
+      if (s === "espelho") {
+        r.innerText = "isso não e sobre você"
+      } 
+      else if (s === "columbina") {
+        r.innerText = "Perfeita, tão perfeita"
+      } 
+	  else if (s === "pierrot") {
+        r.innerText = "nunca devem falar"
+      } 
+	  else if (s === "arlequin") {
+        r.innerText = "odeio estrupadores"
+      } 
+	  else if (s === "jester") {
+        r.innerText = "1006"
+      } 
+	  else if (s === "prototipo") {
+        r.innerText = "https://www.youtube.com/watch?v=CPwh-GNRZI4"
+      } 
+	  else if (s === "thaylon") {
+        r.innerText = "https://tarotfarm.com.br/wp-content/uploads/2020/12/O-Louco-livro.png"
+      } 
+	  else if (s === "cesar") {
+        r.innerText = "Pilhar quebrado"
+      } 
+	  else if (s === "leo") {
+        r.innerText = "vazio,muito vazio,porém profundo"
+      } 
+	  else if (s === "yuno") {
+        r.innerText = "Ancora quebrada"
+      } 
+	  else if (s === "levioni") {
+        r.innerText = "https://pt.wikipedia.org/wiki/Colombina"
+      } 
+      else {
+        r.innerText = "Essa palavra já foi dita antes."
+      }
+    }
+  </script>
+</body>
+</html>
+
